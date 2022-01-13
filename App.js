@@ -5,13 +5,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './App/screens/Login';
 import Register from './App/screens/Register';
-import Details from './App/screens/details';
+import Details from './App/screens/gestion_ticket/details';
 import Home from './App/screens/home';
-import ListTicket from './App/screens/listTicket';
-import TicketCreate from './App/screens/TicketCreate';
-import AddMessage from './App/screens/AddMessage';
-import ListMessage from './App/screens/ListMessage';
+import ListTicket from './App/screens/gestion_ticket/listTicket';
+import TicketCreate from './App/screens/gestion_ticket/TicketCreate';
+import AddMessage from './App/screens/gestion_ticket/AddMessage';
+import ListMessage from './App/screens/gestion_ticket/ListMessage';
 import LoginAdmin from './App/screens/loginAdmin';
+import ProjetCreate from './App/screens/gestion_projet/ProjetCreate';
+import ListProjet from './App/screens/gestion_projet/listProjet';
+import ListTache from './App/screens/gestion_projet/listTache';
+import Gestion from './App/screens/gestion';
 const Stack = createStackNavigator();
 
 class App extends React.Component {
@@ -24,6 +28,10 @@ class App extends React.Component {
           <Stack.Screen name="home" component={Home} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="LoginAdmin" component={LoginAdmin} />
+          <Stack.Screen name="Gestion" component={Gestion} />
+          <Stack.Screen name="ListProjet" component={ListProjet} />
+          <Stack.Screen name="ListTache" component={ListTache} />
+          <Stack.Screen name="ProjetCreate" component={ProjetCreate} />
           <Stack.Screen name="ListTicket" component={ListTicket} />
           <Stack.Screen name="ListMessage" component={ListMessage} />
           <Stack.Screen name="AddMessage" component={AddMessage} />
